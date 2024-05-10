@@ -1,0 +1,29 @@
+perguntas_respostas = {
+    "Qual é a sua cor favorita?": "Minha cor favorita é azul.",
+    "Qual é o seu nome?": "Meu nome é Danilo",
+    "Qual é a capital do Brasil?": "A capital do Brasil é Brasília.",
+    "Quem foi Albert Einstein?": "Albert Einstein foi um famoso físico alemão.",
+    "O que é inteligência artificial?": "Inteligência artificial é a simulação de processos de inteligência humana por sistemas de computador.",
+    "Quanto é 2 + 2?": "2 + 2 é igual a 4."
+}
+
+def responder_pergunta(pergunta):
+    resposta = perguntas_respostas.get(pergunta, "Desculpe, não sei a resposta para essa pergunta.")
+    return resposta
+
+def main():
+    print("Olá! Estou aqui para responder suas perguntas.")
+    print("Você pode me fazer perguntas sobre vários tópicos.")
+
+    while True:
+        pergunta = input("Faça uma pergunta (ou digite 'sair' para encerrar): ")
+
+        if pergunta.lower() == 'sair':
+            print("Até logo!")
+            break
+
+        resposta = responder_pergunta(pergunta)
+        print(resposta)
+
+if __name__ == "__main__":
+    main()
